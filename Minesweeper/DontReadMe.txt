@@ -1,1 +1,0 @@
-Nemas ma citat
