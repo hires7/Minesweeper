@@ -1,12 +1,10 @@
 ------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
+Epicky projek epickych rozmerov
 ------------------------------------------------------------------------
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
+PROJECT TITLE: Minesweeper
+PURPOSE OF PROJECT: Bakalar
+VERSION or DATE: almost final
+HOW TO START THIS PROJECT: you can't (yet)
 AUTHORS:
 USER INSTRUCTIONS:
