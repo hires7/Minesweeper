@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Trieda podla zvolenej obtiaznosti vytvori siet zo stvocov. Nahodne rozlozi do pola miny
  * 
