@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Stvorec
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Stvorec\ here.\r\n\ \r\n\ @author\ (Maros\ Roncak)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Stvorec()
+comment2.params=
+comment2.target=int\ getObsah()
+comment3.params=
+comment3.target=boolean\ getStavZobrazenia()
+comment4.params=
+comment4.target=void\ zobraz()
+numComments=5
