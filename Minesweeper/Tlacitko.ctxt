@@ -1,6 +1,12 @@
 #BlueJ class context
 comment0.target=Tlacitko
 comment0.text=\r\n\ Tla\u010Ditko\ resetuj\u00FAce\ hru\r\n\ \r\n\ @author\ Adam\ Jel\u017Ea\r\n\ @version\ 1.0\r\n
-comment1.params=
-comment1.target=Tlacitko()
-numComments=2
+comment1.params=x\ y
+comment1.target=Tlacitko(int,\ int)
+comment2.params=
+comment2.target=int\ getX()
+comment3.params=
+comment3.target=int\ getY()
+comment4.params=
+comment4.target=void\ tik()
+numComments=5
