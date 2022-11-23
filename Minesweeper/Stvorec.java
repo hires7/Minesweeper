@@ -13,7 +13,7 @@ public class Stvorec {
     private boolean jeZobrazene;
     
     public Stvorec() {
-        this.obrazok = new Obrazok(null);
+        this.obrazok = new Obrazok("");
         this.poziciaX = poziciaX;
         this.poziciaY = poziciaY;
         this.stranaA = stranaA;
@@ -32,9 +32,17 @@ public class Stvorec {
     
     public void zobraz() {
         if(!jeZobrazene) {
-            this.obrazok.zmenObrazok(null);
+            this.obrazok.zmenObrazok("");
         }
         
+    }
+    
+    public int getPoziciaX() {
+        return this.poziciaX;
+    }
+    
+    public int getPoziciaY() {
+        return this.poziciaY;
     }
     
 }
