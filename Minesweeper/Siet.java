@@ -22,7 +22,17 @@ public class Siet {
        this.pocetMin = pocetMin;
        this.pozX = pozX;
        this.pozY = pozY;
+       Random rand = new Random();
        
        this.siet = new Stvorec[pocetRiadkov][pocetStlpcov];
+       for (int i = 0; i < pocetRiadkov; i++) {
+           int mina = 0;
+           if (rand.nextInt(pocetMin/pocetRiadkov) == pocetMin/pocetRiadkov - 1) {
+               mina = 1;
+           }
+           for (int j = 0; j < pocetStlpcov; j++) {
+               this.siet[i][j] = new Stvorec((pozX + (j * pozX)), (pozY + (i * pozY)), 50, mina); 
+           }
+       }
     }
 }
