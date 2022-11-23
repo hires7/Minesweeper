@@ -1,3 +1,5 @@
+package MinesweeperTriedaHra;
+
 
 /**
  * Write a description of class Hra here.
