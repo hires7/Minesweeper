@@ -1,20 +1,30 @@
 
 /**
- * Write a description of class Tlacidlo here.
+ * Tlačitko resetujúce hru
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Adam Jelža
+ * @version 1.0
  */
 public class Tlacitko {
     /**
      * Constructor for objects of class Tlacidlo
      */
-    private Obrazok symbol;
+    private Stvorec vypln;
+    private Stvorec obrys;
+    private Obrazok smajlik;
+    private int x;
+    private int y;
     
-    public Tlacitko() {
-        this.symbol = new Obrazok("//smajlik.jpg");
+    public Tlacitko(int x, int y) {
+        this.
         
+        this.smajlik = new Obrazok("pics//smajlík.png");
+        this.vypln = new Stvorec();
+        this.obrys = new Stvorec();
+        
+        this.vypln.zobraz();
+        this.smajlik.zobraz();
     }
     
-    
+    public
 }
