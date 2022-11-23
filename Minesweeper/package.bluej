@@ -1,7 +1,8 @@
 #BlueJ package file
-dependency1.from=Obrazok
-dependency1.to=Platno
+dependency1.from=Tlacitko
+dependency1.to=Obrazok
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency2.from=Siet
 dependency2.to=Stvorec
 dependency2.type=UsesDependency
@@ -24,6 +25,27 @@ package.frame.height=600
 package.frame.width=800
 package.numDependencies=3
 package.numTargets=6
+=======
+dependency2.from=Obrazok
+dependency2.to=Platno
+dependency2.type=UsesDependency
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=92
+objectbench.width=452
+package.divider.horizontal=0.5995297805642633
+package.divider.vertical=0.8014354066985646
+package.editor.height=396
+package.editor.width=674
+package.editor.x=44
+package.editor.y=82
+package.frame.height=600
+package.frame.width=800
+package.numDependencies=2
+package.numTargets=5
+>>>>>>> GitHub/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -60,6 +82,7 @@ target4.width=150
 target4.x=10
 target4.y=190
 target5.height=50
+<<<<<<< HEAD
 target5.name=Stvorec
 target5.showInterface=false
 target5.type=ClassTarget
@@ -73,3 +96,11 @@ target6.type=ClassTarget
 target6.width=80
 target6.x=140
 target6.y=130
+=======
+target5.name=Obrazok
+target5.showInterface=false
+target5.type=ClassTarget
+target5.width=80
+target5.x=140
+target5.y=130
+>>>>>>> GitHub/master
