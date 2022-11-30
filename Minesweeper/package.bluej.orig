@@ -1,7 +1,8 @@
 #BlueJ package file
-dependency1.from=Tlacitko
-dependency1.to=Obrazok
+dependency1.from=Obrazok
+dependency1.to=Platno
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 <<<<<<< HEAD
 dependency2.from=Siet
 dependency2.to=Stvorec
@@ -54,6 +55,35 @@ package.frame.height=600
 package.frame.width=800
 <<<<<<< HEAD
 package.numDependencies=2
+=======
+dependency2.from=Stvorec
+dependency2.to=Platno
+dependency2.type=UsesDependency
+dependency3.from=Manazer
+dependency3.to=Platno
+dependency3.type=UsesDependency
+dependency4.from=Tlacitko
+dependency4.to=Stvorec
+dependency4.type=UsesDependency
+dependency5.from=Tlacitko
+dependency5.to=Obrazok
+dependency5.type=UsesDependency
+editor.fx.0.height=27
+editor.fx.0.width=159
+editor.fx.0.x=-25600
+editor.fx.0.y=-25600
+objectbench.height=148
+objectbench.width=903
+package.divider.horizontal=0.600263852242744
+package.divider.vertical=0.8008213552361396
+package.editor.height=618
+package.editor.width=1424
+package.editor.x=0
+package.editor.y=0
+package.frame.height=878
+package.frame.width=1550
+package.numDependencies=5
+>>>>>>> origin/tlacidlo
 package.numTargets=5
 >>>>>>> GitHub/master
 =======
@@ -69,12 +99,12 @@ readme.width=47
 readme.x=10
 readme.y=10
 target1.height=50
-target1.name=Siet
+target1.name=Manazer
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
-target1.x=160
-target1.y=10
+target1.x=400
+target1.y=70
 target2.height=50
 target2.name=Platno
 target2.showInterface=false
@@ -87,6 +117,7 @@ target3.name=Tlacitko
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
+<<<<<<< HEAD
 target3.x=340
 target3.y=120
 target4.height=62
@@ -96,6 +127,17 @@ target4.width=150
 <<<<<<< HEAD
 target4.x=10
 target4.y=190
+=======
+target3.x=230
+target3.y=180
+target4.height=50
+target4.name=Stvorec
+target4.showInterface=false
+target4.type=ClassTarget
+target4.width=80
+target4.x=300
+target4.y=70
+>>>>>>> origin/tlacidlo
 target5.height=50
 <<<<<<< HEAD
 target5.name=Stvorec
@@ -128,8 +170,13 @@ target5.name=Obrazok
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=80
+<<<<<<< HEAD
 target5.x=140
 target5.y=130
 >>>>>>> GitHub/master
 =======
 >>>>>>> origin/Stvorec
+=======
+target5.x=160
+target5.y=70
+>>>>>>> origin/tlacidlo
