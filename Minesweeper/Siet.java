@@ -21,7 +21,7 @@ public class Siet {
        this.pocetStlpcov = pocetStlpcov;
        this.pocetMin = pocetMin;
        this.pozX = pozX;
-       this.pozY = pozY;
+       this.pozY = pozY + 16;
        Random rand = new Random();
        
        this.siet = new Stvorec[pocetRiadkov][pocetStlpcov];
@@ -31,8 +31,13 @@ public class Siet {
                mina = 1;
            }
            for (int j = 0; j < pocetStlpcov; j++) {
-               this.siet[i][j] = new Stvorec((pozX + (j * pozX)), (pozY + (i * pozY)), 50, mina); 
+               this.siet[i][j] = new Stvorec((this.pozX + (j * 32)), (this.pozY + (i * 32)), 32, mina); 
+               
            }
        }
+    }
+    
+    public void vyberStvorec(int x, int y) {
+        this.siet[x][y].stlac();
     }
 }

@@ -4,4 +4,6 @@ comment0.text=\r\n\ Trieda\ podla\ zvolenej\ obtiaznosti\ vytvori\ siet\ zo\ stv
 comment1.params=pocetRiadkov\ pocetStlpcov\ pocetMin\ pozX\ PozY
 comment1.target=Siet(int,\ int,\ int,\ int,\ int)
 comment1.text=\r\n\ Trieda\ hra\ vlozi\ parametre\ o\ rozmeroch\ a\ pocte\ min\ podla\ obztiaznosti\r\n
-numComments=2
+comment2.params=x\ y
+comment2.target=void\ vyberStvorec(int,\ int)
+numComments=3
