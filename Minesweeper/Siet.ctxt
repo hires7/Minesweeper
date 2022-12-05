@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.target=Siet
 comment0.text=\r\n\ Trieda\ podla\ zvolenej\ obtiaznosti\ vytvori\ siet\ zo\ stvocov.\ Nahodne\ rozlozi\ do\ pola\ miny\r\n\ \r\n\ @author\ Patrik\ S.\ Ondreicka\ \r\n\ @version\ 0.1\r\n
-comment1.params=pocetRiadkov\ pocetStlpcov\ pocetMin\ pozX\ PozY
+comment1.params=pocetRiadkov\ pocetStlpcov\ pocetMin\ pozX\ pozY
 comment1.target=Siet(int,\ int,\ int,\ int,\ int)
 comment1.text=\r\n\ Trieda\ hra\ vlozi\ parametre\ o\ rozmeroch\ a\ pocte\ min\ podla\ obztiaznosti\r\n
-comment2.params=x\ y
-comment2.target=void\ vyberStvorec(int,\ int)
-numComments=3
+comment2.params=
+comment2.target=void\ ocisluj()
+comment3.params=x\ y
+comment3.target=void\ vyberStvorec(int,\ int)
+comment4.params=
+comment4.target=void\ zobrazVsetko()
+comment5.params=x\ y
+comment5.target=java.lang.String\ getObsah(int,\ int)
+numComments=6

@@ -13,6 +13,7 @@ public class Hra {
     private int pozX;
     private int pozY;
     
+    private Lista lista;
     private Siet siet;
     private Manazer manazer;
     
@@ -21,17 +22,27 @@ public class Hra {
        this.pocetStlpcov = pocetStlpcov;
        this.pocetMin = pocetMin;
        this.pozX = pozX + 16;
-       this.pozY = pozY + 16;
+       this.pozY = pozY + 56;
+       
        this.siet = new Siet(this.pocetRiadkov, this.pocetStlpcov, this.pocetMin, this.pozX, this.pozY);
        
        this.manazer = new Manazer();
        this.manazer.spravujObjekt(this);
+       
+       this.lista = new Lista(this.manazer, this.pocetStlpcov);
     }
     
     public void vyberSuradnice(int x, int y) {
-        x /= 32;
-        y /= 32;
-        System.out.println(x + "  " + y);
-        this.siet.vyberStvorec(y, x);
+        this.lista.stlacTlacitko(x, y);
+        if (y > 45) {
+            x /= 32;
+            y = (y - 55) / 32;
+            System.out.println(x + "  " + y);
+            this.siet.vyberStvorec(y, x);
+        }
+    }
+    
+    public void zobrazVsetko() {
+        this.siet.zobrazVsetko();
     }
 }
