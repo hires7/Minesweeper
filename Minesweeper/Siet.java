@@ -53,7 +53,7 @@ public class Siet {
                             pocetMin++;
                         }
                     }
-                    if (riadok != 0 && stlpec != this.siet[0].length) { //lavy horny
+                    if (riadok != 0 && stlpec != this.siet[0].length - 1) { //lavy horny
                         if (this.siet[riadok - 1][stlpec + 1].getObsah() == 9) {
                             pocetMin++;
                         }
@@ -63,22 +63,22 @@ public class Siet {
                             pocetMin++;
                         }
                     }
-                    if (stlpec != this.siet[0].length) { //pravy
-                        if (this.siet[riadok][stlpec + 1].getObsah() == 9) {
-                            pocetMin++;
-                        }
+                    if (stlpec != this.siet[0].length - 1) { //pravy
+                         if (this.siet[riadok][stlpec + 1].getObsah() == 9) {
+                             pocetMin++;
+                         }
                     }
-                    if (stlpec != 0 && riadok != this.siet.length) { //lavydole
+                    if (stlpec != 0 && riadok != this.siet.length - 1) { //lavydole
                         if (this.siet[riadok + 1][stlpec - 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (riadok != this.siet.length) { //dole
+                    if (riadok != this.siet.length - 1) { //dole
                         if (this.siet[riadok + 1][stlpec].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (riadok != this.siet.length && stlpec != this.siet[0].length) { //pravy dole
+                    if (riadok != this.siet.length - 1 && stlpec != this.siet[0].length - 1) { //pravy dole
                         if (this.siet[riadok + 1][stlpec + 1].getObsah() == 9) {
                             pocetMin++;
                         }

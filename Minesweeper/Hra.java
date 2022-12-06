@@ -24,12 +24,12 @@ public class Hra {
        this.pozX = pozX + 16;
        this.pozY = pozY + 56;
        
-       this.siet = new Siet(this.pocetRiadkov, this.pocetStlpcov, this.pocetMin, this.pozX, this.pozY);
-       
        this.manazer = new Manazer();
        this.manazer.spravujObjekt(this);
        
        this.lista = new Lista(this.manazer, this.pocetStlpcov);
+       
+       this.siet = new Siet(this.pocetRiadkov, this.pocetStlpcov, this.pocetMin, this.pozX, this.pozY);
     }
     
     public void vyberSuradnice(int x, int y) {
