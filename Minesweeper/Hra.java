@@ -7,29 +7,29 @@
  */
 public class Hra {
         
-    private int pocetRiadkov;
+    /*private int pocetRiadkov;
     private int pocetStlpcov;
     private int pocetMin;
     private int pozX;
-    private int pozY;
+    private int pozY;*/
     
     private Lista lista;
     private Siet siet;
     private Manazer manazer;
     
-    public Hra(int pocetRiadkov, int pocetStlpcov, int pocetMin, int pozX, int PozY) {
-       this.pocetRiadkov = pocetRiadkov;
+    public Hra(/*int pocetRiadkov, int pocetStlpcov, int pocetMin, int pozX, int PozY*/) {
+       /*this.pocetRiadkov = pocetRiadkov;
        this.pocetStlpcov = pocetStlpcov;
        this.pocetMin = pocetMin;
        this.pozX = pozX + 16;
-       this.pozY = pozY + 56;
+       this.pozY = pozY + 56;*/
        
        this.manazer = new Manazer();
        this.manazer.spravujObjekt(this);
        
-       this.lista = new Lista(this.manazer, this.pocetStlpcov);
+       this.lista = new Lista(this.manazer, 10);
        
-       this.siet = new Siet(this.pocetRiadkov, this.pocetStlpcov, this.pocetMin, this.pozX, this.pozY);
+       this.siet = new Siet(10, 10, 10, 0+16, 0+56);
        this.siet.zobrazVsetko();
     }
     

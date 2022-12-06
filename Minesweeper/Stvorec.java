@@ -36,9 +36,9 @@ public class Stvorec {
         if(!jeZobrazene) {
             this.obrazok.zmenObrazok("pics//Stvorec.png");
             switch (this.obsah) {
-                case 1:
-                    this.obrazok.zmenObrazok("pics\\StvorecTmavy.png"); //blank
                 case 0:
+                    this.obrazok.zmenObrazok("pics\\StvorecTmavy.png"); //blank
+                case 1:
                     this.obrazok.zmenObrazok("pics\\1.png");
                     break;
                 case 2:
@@ -73,7 +73,6 @@ public class Stvorec {
     
     public void zmenObsah(int novyObsah) {
         this.obsah = novyObsah;
-        
     }
 
     public int getObsah() {

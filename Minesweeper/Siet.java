@@ -25,17 +25,40 @@ public class Siet {
        Random rand = new Random();
        
        this.siet = new Stvorec[this.pocetRiadkov][this.pocetStlpcov];
+       
+       int pocMinNaRiad = pocetMin / this.pocetRiadkov;
+       int pocMinNaRiadZvysok = pocetMin % this.pocetRiadkov;
+       int pocMinNaPriadanie = this.pocetMin;
        for (int i = 0; i < this.pocetRiadkov; i++) {
            int mina = 0;
            int docPocetMin = this.pocetMin;
-           
-           if (rand.nextInt(9) == 1 && docPocetMin > 0) {
-                mina = 9;
-                docPocetMin--;
-           }
-           
            for (int j = 0; j < this.pocetStlpcov; j++) {
-               this.siet[i][j] = new Stvorec((this.pozX + (j * 32)), (this.pozY + (i * 32)), 32, mina);               
+                this.siet[i][j] = new Stvorec((this.pozX + (j * 32)), (this.pozY + (i * 32)), 32, 0);               
+           }
+       }
+       
+       for(int i = 0; i < this.pocetRiadkov; i++) {
+           int pocMinNaTentoRiad = pocMinNaRiad;
+           while(pocMinNaTentoRiad != 0) {
+               for(int j = 0; j < this.pocetStlpcov; j++) {
+                   if(pocMinNaTentoRiad > 0 && rand.nextInt(this.pocetStlpcov) == this.pocetStlpcov-1) {
+                       this.siet[i][j].zmenObsah(9);
+                       pocMinNaTentoRiad--;
+                       pocMinNaPriadanie--;
+                   }
+                   if(pocMinNaTentoRiad <= 0) {
+                       break;
+                   }
+               }
+           }
+        }
+        
+       while(pocMinNaRiadZvysok > 0 || pocMinNaPriadanie > 0) {
+           Stvorec vybStvorec = this.siet[rand.nextInt(this.pocetRiadkov)][rand.nextInt(this.pocetStlpcov)]; 
+           if(vybStvorec.getObsah() != 9) {
+               vybStvorec.zmenObsah(9);
+               pocMinNaPriadanie--;
+               pocMinNaRiadZvysok--;
            }
        }
        
