@@ -30,6 +30,7 @@ public class Hra {
        this.lista = new Lista(this.manazer, this.pocetStlpcov);
        
        this.siet = new Siet(this.pocetRiadkov, this.pocetStlpcov, this.pocetMin, this.pozX, this.pozY);
+       this.siet.zobrazVsetko();
     }
     
     public void vyberSuradnice(int x, int y) {

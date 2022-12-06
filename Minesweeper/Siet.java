@@ -27,9 +27,13 @@ public class Siet {
        this.siet = new Stvorec[this.pocetRiadkov][this.pocetStlpcov];
        for (int i = 0; i < this.pocetRiadkov; i++) {
            int mina = 0;
-           // if (rand.nextInt(this.pocetMin/this.pocetRiadkov) == this.pocetMin/this.pocetRiadkov - 1) {
-               // mina = 9;
-           // }
+           int docPocetMin = this.pocetMin;
+           
+           if (rand.nextInt(9) == 1 && docPocetMin > 0) {
+                mina = 9;
+                docPocetMin--;
+           }
+           
            for (int j = 0; j < this.pocetStlpcov; j++) {
                this.siet[i][j] = new Stvorec((this.pozX + (j * 32)), (this.pozY + (i * 32)), 32, mina);               
            }
@@ -90,13 +94,13 @@ public class Siet {
     }
     
     public void vyberStvorec(int x, int y) {
-        this.siet[x][y].stlac();
+        this.siet[x][y].zobraz();
     }
     
     public void zobrazVsetko() {
-        for (int y = 0; y <= this.siet.length; y++) {
-            for (int x = 0; x <= this.siet[0].length; x++) {
-                this.siet[x][y].zobraz();
+        for (int riadok = 0; riadok < this.siet.length; riadok++) {
+            for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
+                this.siet[riadok][stlpec].zobraz();
             }
         }
     }
