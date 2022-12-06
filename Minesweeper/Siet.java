@@ -27,9 +27,9 @@ public class Siet {
        this.siet = new Stvorec[this.pocetRiadkov][this.pocetStlpcov];
        for (int i = 0; i < this.pocetRiadkov; i++) {
            int mina = 0;
-           if (rand.nextInt(this.pocetMin/this.pocetRiadkov) == this.pocetMin/this.pocetRiadkov - 1) {
-               mina = 9;
-           }
+           // if (rand.nextInt(this.pocetMin/this.pocetRiadkov) == this.pocetMin/this.pocetRiadkov - 1) {
+               // mina = 9;
+           // }
            for (int j = 0; j < this.pocetStlpcov; j++) {
                this.siet[i][j] = new Stvorec((this.pozX + (j * 32)), (this.pozY + (i * 32)), 32, mina);               
            }
@@ -39,51 +39,51 @@ public class Siet {
     }
     
     private void ocisluj() {        
-        for (int x = 0; x < this.siet.length; x++) {
-            for (int y = 0; y < this.siet[0].length; y++) {
-                if (this.siet[y][x].getObsah() != 9) {
+        for (int riadok = 0; riadok < this.siet.length; riadok++) {
+            for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
+                if (this.siet[riadok][stlpec].getObsah() != 9) {
                     int pocetMin = 0;
-                    if (x != 0 && y != 0) {
-                        if (this.siet[x - 1][y + 1].getObsah() == 9) {
+                    if (riadok != 0 && stlpec != 0) { //pravy horny
+                        if (this.siet[riadok - 1][stlpec - 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (y != 0) {
-                        if (this.siet[x][y + 1].getObsah() == 9) {
+                    if (riadok != 0) { //horny
+                        if (this.siet[riadok - 1][stlpec].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (x != this.siet[0].length && y != 0) {
-                        if (this.siet[x + 1][y + 1].getObsah() == 9) {
+                    if (riadok != 0 && stlpec != this.siet[0].length) { //lavy horny
+                        if (this.siet[riadok - 1][stlpec + 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (x != 0) {
-                        if (this.siet[x - 1][y].getObsah() == 9) {
+                    if (stlpec != 0) { //lavy
+                        if (this.siet[riadok][stlpec - 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (x != this.siet[0].length) {
-                        if (this.siet[x + 1][y].getObsah() == 9) {
+                    if (stlpec != this.siet[0].length) { //pravy
+                        if (this.siet[riadok][stlpec + 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (x != 0 && y != this.siet.length) {
-                        if (this.siet[x - 1][y - 1].getObsah() == 9) {
+                    if (stlpec != 0 && riadok != this.siet.length) { //lavydole
+                        if (this.siet[riadok + 1][stlpec - 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (y != this.siet.length) {
-                        if (this.siet[x][y - 1].getObsah() == 9) {
+                    if (riadok != this.siet.length) { //dole
+                        if (this.siet[riadok + 1][stlpec].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    if (x != this.siet[0].length && y != this.siet.length) {
-                        if (this.siet[x + 1][y - 1].getObsah() == 9) {
+                    if (riadok != this.siet.length && stlpec != this.siet[0].length) { //pravy dole
+                        if (this.siet[riadok + 1][stlpec + 1].getObsah() == 9) {
                             pocetMin++;
                         }
                     }
-                    this.siet[x][y].zmenObsah(pocetMin); 
+                    this.siet[riadok][stlpec].zmenObsah(pocetMin); 
                 }
             }
         }
