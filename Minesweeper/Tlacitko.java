@@ -43,8 +43,11 @@ public class Tlacitko {
         return this.y;
     }
     
-    public void tik() {    
-        if (this.jeStlacene && this.cas < 10) {
+    public void tik() {
+        if (!jeStlacene){
+            return;
+        }
+        if (this.cas < 10) {
             this.cas++;
             this.pozadie.zmenObrazok("pics\\StvorecTmavy1.png");
         } else {
