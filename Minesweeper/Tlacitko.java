@@ -56,7 +56,7 @@ public class Tlacitko {
      * Zobrazí animáciu stlacenia tlacitka
      */
     public void tik() {
-        if (!jeStlacene){
+        if (!this.jeStlacene) {
             return;
         }
         if (this.cas < 8) {

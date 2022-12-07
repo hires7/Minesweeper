@@ -1,5 +1,3 @@
-import java.awt.Rectangle;
-
 /**
  * Stvorec(jedno pličko siete)
  * 
@@ -39,7 +37,7 @@ public class Stvorec {
      * Zobrazí obsah štvorca
      */
     public void zobraz() {
-        if(!jeZobrazene) {
+        if (!this.jeZobrazene) {
             this.obrazok.zmenObrazok("pics//Stvorec.png");
             switch (this.obsah) {
                 case 0:
@@ -96,14 +94,14 @@ public class Stvorec {
      * Vráti informáciu či je štvorec zobrazený
      */
     public boolean getStavZobrazenia() {        
-       return this.jeZobrazene;    
+        return this.jeZobrazene;    
     }
     
     /**
      * Vráti informáciu či má štvorec v sebe mínu
      */
     public boolean maMinu() {
-        if (obsah == 9) {
+        if (this.obsah == 9) {
             return true;
         }
         return false;

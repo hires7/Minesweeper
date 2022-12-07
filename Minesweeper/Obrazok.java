@@ -212,11 +212,11 @@ public class Obrazok {
             Platno canvas = Platno.dajPlatno();
         
             AffineTransform at = new AffineTransform();
-            at.translate(this.lavyHornyX + this.sirka() / 2, lavyHornyY + this.vyska() / 2);
+            at.translate(this.lavyHornyX + this.sirka() / 2, this.lavyHornyY + this.vyska() / 2);
             at.rotate(this.uhol / 180.0 * Math.PI);
             at.translate(-this.sirka() / 2, -this.vyska() / 2);
         
-            canvas.draw(this, obrazok, at);
+            canvas.draw(this, this.obrazok, at);
             canvas.wait(10);
         }
     }

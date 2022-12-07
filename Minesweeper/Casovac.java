@@ -73,7 +73,7 @@ public class Casovac {
      * Každú sekundu pričitava čas ak časovač "ide"
      */
     public void tik() {
-        if (!ide) {
+        if (!this.ide) {
             return;
         }
         this.cas++;

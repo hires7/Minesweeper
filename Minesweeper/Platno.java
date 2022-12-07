@@ -14,7 +14,6 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.HashMap;
 import java.util.ArrayList;
-import java.util.TreeMap;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
@@ -242,7 +241,7 @@ public class Platno {
      * Canvas frame. This is essentially a JPanel with added capability to
      * refresh the image drawn on it.
      */
-    private class PopisTvaru implements IDraw{
+    private class PopisTvaru implements IDraw {
         private Shape tvar;
         private String farba;
 
@@ -257,7 +256,7 @@ public class Platno {
         }
     }
     
-    private class PopisObrazku implements IDraw{
+    private class PopisObrazku implements IDraw {
         private BufferedImage obrazok;
         private AffineTransform transformacia;
         

@@ -25,23 +25,24 @@ public class Hra {
      * Konštruktor - vytvorí v hre manažera, Lištu a štvorcovu siet
      */
     public Hra(int pocetRiadkov, int pocetStlpcov, int pocetMin/*, int pozX, int PozY*/) {
-       this.ide = false;
+        this.ide = false;
         /*this.pocetRiadkov = pocetRiadkov;
-       this.pocetStlpcov = pocetStlpcov;
-       this.pocetMin = pocetMin;
-       this.pozX = pozX + 16;
-       this.pozY = pozY + 56;*/
-       if((pocetRiadkov * pocetStlpcov - pocetMin) > 0) {
-           this.manazer = new Manazer();
-           this.manazer.spravujObjekt(this);
+         * this.pocetStlpcov = pocetStlpcov;
+         * this.pocetMin = pocetMin;
+         * this.pozX = pozX + 16;
+         * this.pozY = pozY + 56;
+         */
+        if ((pocetRiadkov * pocetStlpcov - pocetMin) > 0) {
+            this.manazer = new Manazer();
+            this.manazer.spravujObjekt(this);
            
-           this.lista = new Lista(this.manazer, pocetStlpcov);
+            this.lista = new Lista(this.manazer, pocetStlpcov);
            
-           this.siet = new Siet(pocetRiadkov, pocetStlpcov, pocetMin, 0+16, 0+56);
+            this.siet = new Siet(pocetRiadkov, pocetStlpcov, pocetMin, 0 + 16, 0 + 56);
            
-           this.lista.setCasovacIde(true);
-           this.ide = true;
-           //this.siet.zobrazVsetko();
+            this.lista.setCasovacIde(true);
+            this.ide = true;
+            //this.siet.zobrazVsetko();
         } else {
             System.out.println("Pri tvorbe hre doslo k chybe:\npocet min bol nastaveny na prilis vysoku hodnotu");
         }
@@ -61,7 +62,7 @@ public class Hra {
             this.siet.setNajdenaMina(false);
         }
         
-        if (!ide) {
+        if (!this.ide) {
             return;
         }
         
