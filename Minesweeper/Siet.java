@@ -1,9 +1,12 @@
 import java.util.Random;
+
 /**
  * Trieda podla zvolenej obtiaznosti vytvori siet zo stvocov. Nahodne rozlozi do pola miny
  * 
  * @author Patrik S. Ondreicka 
- * @version 0.1
+ * @author Adam Jelža
+ * 
+ * @version 1.0
  */
 public class Siet {
     private int pocetRiadkov;
@@ -68,11 +71,17 @@ public class Siet {
         this.ocisluj();
     }
     
-    public boolean getnajdenaMina() {
+    /**
+     * Zistí či v sieti bola nájdená/odokrytá mína
+     */
+    public boolean getNajdenaMina() {
         return this.najdenaMina;
     }
     
-    public void setnajdenaMina(boolean najdenaMina) {
+    /**
+     * nastaví atribút najdená mína na zadanú hodnotu
+     */
+    public void setNajdenaMina(boolean najdenaMina) {
         this.najdenaMina = najdenaMina;
     }
     
@@ -126,7 +135,10 @@ public class Siet {
     }
     }
     }*/
-
+    
+    /**
+     * Vloží na policka bez mín počet mín v okolí 1+ políčka
+     */
     private void ocisluj() {
         for (int i = 0; i < this.siet.length; i++) {
             for (int j = 0; j < this.siet[0].length; j++) {
@@ -150,7 +162,10 @@ public class Siet {
             }
         }
     }
-
+    
+    /**
+     * vyberie štvorec podla suradnic a ak má v sebe mínu, zmení atribut najdenaMina na true
+     */
     public void vyberStvorec(int x, int y) {
         this.siet[x][y].zobraz();
         if (this.siet[x][y].getObsah() == 9) {
@@ -158,6 +173,9 @@ public class Siet {
         }
     }
 
+    /**
+     * odhalí všetky políčka siete
+     */
     public void zobrazVsetko() {
         for (int riadok = 0; riadok < this.siet.length; riadok++) {
             for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
@@ -166,6 +184,9 @@ public class Siet {
         }
     }
     
+    /**
+     * Odhalí všetky políčka obsahujúce mínu
+     */
     public void zobrazVsetkyMiny() {
         for (int riadok = 0; riadok < this.siet.length; riadok++) {
             for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
@@ -175,11 +196,10 @@ public class Siet {
             }
         }
     }
-    
-    public String getObsah(int x, int y) {
-        return null;
-    }
-    
+      
+    /**
+     * restuje siete pre novu hru(zatial nefunguje)
+     */
     public void resetujSiet() {
         for (int riadok = 0; riadok < this.siet.length; riadok++) {
             for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {

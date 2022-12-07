@@ -5,9 +5,6 @@
  * @version 1.0
  */
 public class Tlacitko {
-    /**
-     * Constructor for objects of class Tlacidlo
-     */
     private Obrazok pozadie;
     private Obrazok tlacitko;
     private int x;
@@ -15,6 +12,9 @@ public class Tlacitko {
     private int cas;
     private boolean jeStlacene;
     
+    /**
+     * Konštruktor - vytvorý pozadie a smajlíka
+     */
     public Tlacitko(int x, int y) {
         this.x = x;
         this.y = y;
@@ -30,19 +30,31 @@ public class Tlacitko {
         this.tlacitko.zobraz();
     }
     
+    /**
+     * Stlačí tlačidlo
+     */
     public void stlac() {        
         this.jeStlacene = true;
         this.cas = 0;       
     }
     
+    /**
+     * Získa polohu na osi x
+     */
     public int getX() {
         return this.x;
     }
     
+    /**
+     * Získa polohu na osi y
+     */
     public int getY() {
         return this.y;
     }
     
+    /**
+     * Zobrazí animáciu stlacenia tlacitka
+     */
     public void tik() {
         if (!jeStlacene){
             return;

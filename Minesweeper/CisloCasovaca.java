@@ -1,5 +1,5 @@
 /**
- * Write a description of class Cislo here.
+ * Trieda Cislo
  * 
  * @author Jakub Danco
  * @version 1.0
@@ -13,6 +13,9 @@ public class CisloCasovaca {
     
     private Obrazok obrazok;
     
+    /**
+     * Konštruktor - vytvory číslo časovaca
+     */
     public CisloCasovaca(int x, int y) {
         this.pozX = x;
         this.pozY = y;
@@ -21,6 +24,7 @@ public class CisloCasovaca {
         this.obrazok.zmenPolohu(this.pozX, this.pozY);
         this.obrazok.zobraz();
     }
+    
     /**
      * Zvysi cislo o 1
      */
@@ -34,15 +38,24 @@ public class CisloCasovaca {
         }
     }
     
+    /**
+     * Skryje číslo časovača
+     */
     public void skry() {
         this.obrazok.skry();
     }
     
+    /**
+     * Zmení číslo na 0
+     */
     public void vynuluj() {
         this.cislo = 0;
         this.obrazok.zmenObrazok("pics\\dig" + this.cislo + ".png");
     }
     
+    /**
+     * Získa hodnotu atribútu číslo
+     */
     public int getCislo() {
         return this.cislo;
     }

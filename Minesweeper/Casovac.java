@@ -22,6 +22,9 @@ public class Casovac {
     private CisloCasovaca cislo3;       //Sekundy * 10
     private CisloCasovaca cislo4;       //Sekundy
     
+    /**
+     * Konštruktor - vytrvori manažera, cisla a pozadie, a rozmiestni ich.
+     */
     public Casovac(int x, int y) {
         this.manazer = new Manazer();
         this.manazer.spravujObjekt(this);
@@ -41,20 +44,34 @@ public class Casovac {
         this.cislo3 = new CisloCasovaca(this.pozX + 40, this.pozY);
         this.cislo4 = new CisloCasovaca(this.pozX + 58, this.pozY);
     }
-        
+    
+    /**
+     * Ziska hodnotu atributu ide
+     */
     public boolean getIde() {
         return this.ide;
     }
     
+    /**
+     * Nastavy atribut ide na vlozenu hodnotu
+     */
     public void setIde(boolean ide) {
         this.ide = ide;
     
     }
     
+    
+    /**
+     * Resetuje čas na hodnotu 0
+     */
     public void resetujCas() {
         this.cas = 0;
     }
     
+    
+    /**
+     * Každú sekundu pričitava čas ak časovač "ide"
+     */
     public void tik() {
         if (!ide) {
             return;
@@ -76,6 +93,9 @@ public class Casovac {
         }
     }
     
+    /**
+     * Zmení Pozíciu časovača
+     */
     public void zmenPoziciu(int x, int y) {
         this.pozX = x;
         this.pozY = y;

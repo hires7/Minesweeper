@@ -1,10 +1,10 @@
 import java.awt.Rectangle;
 
 /**
- * Write a description of class Stvorec here.
+ * Stvorec(jedno pličko siete)
  * 
  * @author Maros Roncak 
- * @version 0.1
+ * @version 1.0
  */
 public class Stvorec {
     private int poziciaX;
@@ -15,6 +15,9 @@ public class Stvorec {
     private Obrazok pozadie;
     private boolean jeZobrazene;
     
+    /**
+     * konštruktor - vytvorí obrázok obsahu ako skrytý a pozadie
+     */
     public Stvorec(int poziciaX, int poziciaY, int stranaA, int obsah) {
         this.pozadie = new Obrazok("pics//StvorecTmavy.png");
         this.pozadie.zmenPolohu(poziciaX, poziciaY);
@@ -32,6 +35,9 @@ public class Stvorec {
         
     }
     
+    /**
+     * Zobrazí obsah štvorca
+     */
     public void zobraz() {
         if(!jeZobrazene) {
             this.obrazok.zmenObrazok("pics//Stvorec.png");
@@ -72,18 +78,30 @@ public class Stvorec {
         }
     }
     
+    /**
+     * Zmení Obsah Stvorca na zadanu hodnotu
+     */
     public void zmenObsah(int novyObsah) {
         this.obsah = novyObsah;
     }
-
+    
+    /**
+     * Vráti obsah Stvorca
+     */
     public int getObsah() {
         return this.obsah;
     }
     
+    /**
+     * Vráti informáciu či je štvorec zobrazený
+     */
     public boolean getStavZobrazenia() {        
        return this.jeZobrazene;    
     }
     
+    /**
+     * Vráti informáciu či má štvorec v sebe mínu
+     */
     public boolean maMinu() {
         if (obsah == 9) {
             return true;
@@ -91,10 +109,16 @@ public class Stvorec {
         return false;
     }
     
+    /**
+     * Vráti poziciuX
+     */
     public int getPoziciaX() {
         return this.poziciaX;
     }
     
+    /**
+     * Vráti poziciuY
+     */
     public int getPoziciaY() {
         return this.poziciaY;
     }   

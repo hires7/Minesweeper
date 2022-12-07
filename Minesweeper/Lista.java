@@ -1,8 +1,10 @@
 
 /**
- * Write a description of class Lista here.
+ * Lišta obsahujúca časovač a tlačítko
  * 
- * @author Jakub Danco 
+ * @author Jakub Danco
+ * @author Adam Jelža
+ * 
  * @version 1.0
  */
 public class Lista {
@@ -15,6 +17,9 @@ public class Lista {
     
     private Casovac casovac;
     
+    /**
+     * konštruktor - vytvorý pozadie, časovač a tlačitko
+     */
     public Lista(Manazer manazer, int pocetStlpcov) {
         this.pocetStlpcov = pocetStlpcov;
         
@@ -33,14 +38,23 @@ public class Lista {
         this.manazer.spravujObjekt(this.tlacitko);
     }
     
+    /**
+     * Zistí či ide časovač
+     */
     public boolean getCasovacIde() {
         return this.casovac.getIde();
     }
     
+    /**
+     * nastaví chod časovaču podla zadanej hodnoti
+     */
     public void setCasovacIde(boolean ide) {
         this.casovac.setIde(ide);
     }
     
+    /**
+     * Stlačí tlačítko
+     */
     public boolean stlacTlacitko(int x, int y) {        
         if (x >= this.tlacitko.getX() - 16 && x <= this.tlacitko.getX() + 16 && y >= this.tlacitko.getY() - 16 && y <= this.tlacitko.getY() + 16) {
             this.tlacitko.stlac();
@@ -49,6 +63,9 @@ public class Lista {
         return false;
     }
     
+    /**
+     * resetuje čas v časovači
+     */
     public void resetujCasovac() {
         this.casovac.resetujCas();
     }

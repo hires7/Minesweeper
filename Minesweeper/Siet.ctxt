@@ -1,24 +1,28 @@
 #BlueJ class context
 comment0.target=Siet
-comment0.text=\r\n\ Trieda\ podla\ zvolenej\ obtiaznosti\ vytvori\ siet\ zo\ stvocov.\ Nahodne\ rozlozi\ do\ pola\ miny\r\n\ \r\n\ @author\ Patrik\ S.\ Ondreicka\ \r\n\ @version\ 0.1\r\n
+comment0.text=\r\n\ Trieda\ podla\ zvolenej\ obtiaznosti\ vytvori\ siet\ zo\ stvocov.\ Nahodne\ rozlozi\ do\ pola\ miny\r\n\ \r\n\ @author\ Patrik\ S.\ Ondreicka\ \r\n\ @author\ Adam\ Jel\u017Ea\r\n\ \r\n\ @version\ 1.0\r\n
 comment1.params=pocetRiadkov\ pocetStlpcov\ pocetMin\ pozX\ pozY
 comment1.target=Siet(int,\ int,\ int,\ int,\ int)
 comment1.text=\r\n\ Trieda\ hra\ vlozi\ parametre\ o\ rozmeroch\ a\ pocte\ min\ podla\ obztiaznosti\r\n
 comment2.params=
-comment2.target=boolean\ getnajdenaMina()
+comment2.target=boolean\ getNajdenaMina()
+comment2.text=\r\n\ Zist\u00ED\ \u010Di\ v\ sieti\ bola\ n\u00E1jden\u00E1/odokryt\u00E1\ m\u00EDna\r\n
 comment3.params=najdenaMina
-comment3.target=void\ setnajdenaMina(boolean)
+comment3.target=void\ setNajdenaMina(boolean)
+comment3.text=\r\n\ nastav\u00ED\ atrib\u00FAt\ najden\u00E1\ m\u00EDna\ na\ zadan\u00FA\ hodnotu\r\n
 comment4.params=
 comment4.target=void\ ocisluj()
-comment4.text=private\ void\ ocisluj()\ {\ \ \ \ \ \ \ \ \r\n\ \ \ \ for\ (int\ riadok\ \=\ 0;\ riadok\ <\ this.siet.length;\ riadok++)\ {\r\n\ \ \ \ for\ (int\ stlpec\ \=\ 0;\ stlpec\ <\ this.siet[0].length;\ stlpec++)\ {\r\n\ \ \ \ if\ (this.siet[riadok][stlpec].getObsah()\ \!\=\ 9)\ {\r\n\ \ \ \ int\ pocetMin\ \=\ 0;\r\n\ \ \ \ if\ (riadok\ \!\=\ 0\ &&\ stlpec\ \!\=\ 0)\ {\ //pravy\ horny\r\n\ \ \ \ if\ (this.siet[riadok\ -\ 1][stlpec\ -\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (riadok\ \!\=\ 0)\ {\ //horny\r\n\ \ \ \ if\ (this.siet[riadok\ -\ 1][stlpec].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (riadok\ \!\=\ 0\ &&\ stlpec\ \!\=\ this.siet[0].length\ -\ 1)\ {\ //lavy\ horny\r\n\ \ \ \ if\ (this.siet[riadok\ -\ 1][stlpec\ +\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (stlpec\ \!\=\ 0)\ {\ //lavy\r\n\ \ \ \ if\ (this.siet[riadok][stlpec\ -\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (stlpec\ \!\=\ this.siet[0].length\ -\ 1)\ {\ //pravy\r\n\ \ \ \ if\ (this.siet[riadok][stlpec\ +\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (stlpec\ \!\=\ 0\ &&\ riadok\ \!\=\ this.siet.length\ -\ 1)\ {\ //lavydole\r\n\ \ \ \ if\ (this.siet[riadok\ +\ 1][stlpec\ -\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (riadok\ \!\=\ this.siet.length\ -\ 1)\ {\ //dole\r\n\ \ \ \ if\ (this.siet[riadok\ +\ 1][stlpec].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ if\ (riadok\ \!\=\ this.siet.length\ -\ 1\ &&\ stlpec\ \!\=\ this.siet[0].length\ -\ 1)\ {\ //pravy\ dole\r\n\ \ \ \ if\ (this.siet[riadok\ +\ 1][stlpec\ +\ 1].getObsah()\ \=\=\ 9)\ {\r\n\ \ \ \ pocetMin++;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ this.siet[riadok][stlpec].zmenObsah(pocetMin);\ \r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n}
+comment4.text=\r\n\ Vlo\u017E\u00ED\ na\ policka\ bez\ m\u00EDn\ po\u010Det\ m\u00EDn\ v\ okol\u00ED\ 1+\ pol\u00ED\u010Dka\r\n
 comment5.params=x\ y
 comment5.target=void\ vyberStvorec(int,\ int)
+comment5.text=\r\n\ vyberie\ \u0161tvorec\ podla\ suradnic\ a\ ak\ m\u00E1\ v\ sebe\ m\u00EDnu,\ zmen\u00ED\ atribut\ najdenaMina\ na\ true\r\n
 comment6.params=
 comment6.target=void\ zobrazVsetko()
+comment6.text=\r\n\ odhal\u00ED\ v\u0161etky\ pol\u00ED\u010Dka\ siete\r\n
 comment7.params=
 comment7.target=void\ zobrazVsetkyMiny()
-comment8.params=x\ y
-comment8.target=java.lang.String\ getObsah(int,\ int)
-comment9.params=
-comment9.target=void\ resetujSiet()
-numComments=10
+comment7.text=\r\n\ Odhal\u00ED\ v\u0161etky\ pol\u00ED\u010Dka\ obsahuj\u00FAce\ m\u00EDnu\r\n
+comment8.params=
+comment8.target=void\ resetujSiet()
+comment8.text=\r\n\ restuje\ siete\ pre\ novu\ hru(zatial\ nefunguje)\r\n
+numComments=9

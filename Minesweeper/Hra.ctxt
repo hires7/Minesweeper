@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=Hra
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Hra\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Hra\ Minesweeper\r\n\ \r\n\ @author\ Jakub\ Dan\u010Do\r\n\ @author\ Adam\ Jel\u017Ea\r\n\ \r\n\ \r\n\ @version\ 1.0\r\n
 comment1.params=pocetRiadkov\ pocetStlpcov\ pocetMin
 comment1.target=Hra(int,\ int,\ int)
+comment1.text=\r\n\ Kon\u0161truktor\ -\ vytvor\u00ED\ v\ hre\ mana\u017Eera,\ Li\u0161tu\ a\ \u0161tvorcovu\ siet\r\n
 comment2.params=x\ y
 comment2.target=void\ vyberSuradnice(int,\ int)
+comment2.text=\r\n\ vyberie\ suradnice\ kde\ u\u017Eivatel\ klikne\ my\u0161ov\r\n
 comment3.params=
 comment3.target=void\ zobrazVsetko()
+comment3.text=\r\n\ metoda\ na\ overenie\ \u010Di\ je\ v\u0161etko\ tam\ kde\ m\u00E1\r\n
 numComments=4

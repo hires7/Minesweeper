@@ -1,9 +1,12 @@
 
 /**
- * Write a description of class Hra here.
+ * Hra Minesweeper
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Jakub Dančo
+ * @author Adam Jelža
+ * 
+ * 
+ * @version 1.0
  */
 public class Hra {
         
@@ -17,7 +20,10 @@ public class Hra {
     private Siet siet;
     private Manazer manazer;
     private boolean ide;
-
+    
+    /**
+     * Konštruktor - vytvorí v hre manažera, Lištu a štvorcovu siet
+     */
     public Hra(int pocetRiadkov, int pocetStlpcov, int pocetMin/*, int pozX, int PozY*/) {
        this.ide = false;
         /*this.pocetRiadkov = pocetRiadkov;
@@ -41,6 +47,9 @@ public class Hra {
         }
     }
     
+    /**
+     * vyberie suradnice kde uživatel klikne myšov
+     */
     public void vyberSuradnice(int x, int y) {
         
         if (this.lista.stlacTlacitko(x, y)) {
@@ -49,7 +58,7 @@ public class Hra {
             this.lista.setCasovacIde(false);
             this.lista.resetujCasovac();
             this.lista.setCasovacIde(true);
-            this.siet.setnajdenaMina(false);
+            this.siet.setNajdenaMina(false);
         }
         
         if (!ide) {
@@ -63,13 +72,16 @@ public class Hra {
             this.siet.vyberStvorec(y, x);
         }
         
-        if (this.siet.getnajdenaMina()) {
+        if (this.siet.getNajdenaMina()) {
             this.lista.setCasovacIde(false);
             this.siet.zobrazVsetkyMiny();
             this.ide = false;
         }
     }
     
+    /**
+     * metoda na overenie či je všetko tam kde má
+     */
     public void zobrazVsetko() {
         this.siet.zobrazVsetko();
     }
