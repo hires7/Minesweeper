@@ -12,6 +12,8 @@ public class Siet {
     private int pozX;
     private int pozY;
     private Stvorec[][] siet;
+    
+    private boolean najdenaMina;
 
     /**
      * Trieda hra vlozi parametre o rozmeroch a pocte min podla obztiaznosti
@@ -23,6 +25,7 @@ public class Siet {
         this.pozX = pozX;
         this.pozY = pozY + 16;
         Random rand = new Random();
+        this.najdenaMina = false;
 
         this.siet = new Stvorec[this.pocetRiadkov][this.pocetStlpcov];
 
@@ -64,7 +67,15 @@ public class Siet {
 
         this.ocisluj();
     }
-
+    
+    public boolean getnajdenaMina() {
+        return this.najdenaMina;
+    }
+    
+    public void setnajdenaMina(boolean najdenaMina) {
+        this.najdenaMina = najdenaMina;
+    }
+    
     /*private void ocisluj() {        
     for (int riadok = 0; riadok < this.siet.length; riadok++) {
     for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
@@ -142,6 +153,9 @@ public class Siet {
 
     public void vyberStvorec(int x, int y) {
         this.siet[x][y].zobraz();
+        if (this.siet[x][y].getObsah() == 9) {
+            this.najdenaMina = true;
+        }
     }
 
     public void zobrazVsetko() {
@@ -151,8 +165,53 @@ public class Siet {
             }
         }
     }
-
+    
+    public void zobrazVsetkyMiny() {
+        for (int riadok = 0; riadok < this.siet.length; riadok++) {
+            for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
+                if (this.siet[riadok][stlpec].getObsah() == 9) {
+                    this.siet[riadok][stlpec].zobraz();
+                }
+            }
+        }
+    }
+    
     public String getObsah(int x, int y) {
         return null;
+    }
+    
+    public void resetujSiet() {
+        Random rand = new Random();
+        
+        int pocMinNaRiad = pocetMin / this.pocetRiadkov;
+        int pocMinNaRiadZvysok = pocetMin % this.pocetRiadkov;
+        int pocMinNaPriadanie = this.pocetMin;
+        
+        for(int i = 0; i < this.pocetRiadkov; i++) {
+            int pocMinNaTentoRiad = pocMinNaRiad;
+            while(pocMinNaTentoRiad != 0) {
+                for(int j = 0; j < this.pocetStlpcov; j++) {
+                    if(pocMinNaTentoRiad > 0 && rand.nextInt(this.pocetStlpcov) == this.pocetStlpcov-1) {
+                        this.siet[i][j].zmenObsah(9);
+                        pocMinNaTentoRiad--;
+                        pocMinNaPriadanie--;
+                    }
+                    if(pocMinNaTentoRiad <= 0) {
+                        break;
+                    }
+                }
+            }
+        }
+
+        while(pocMinNaRiadZvysok > 0 || pocMinNaPriadanie > 0) {
+            Stvorec vybStvorec = this.siet[rand.nextInt(this.pocetRiadkov)][rand.nextInt(this.pocetStlpcov)]; 
+            if(vybStvorec.getObsah() != 9) {
+                vybStvorec.zmenObsah(9);
+                pocMinNaPriadanie--;
+                pocMinNaRiadZvysok--;
+            }
+        }
+        
+        this.ocisluj();
     }
 }

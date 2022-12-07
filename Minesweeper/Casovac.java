@@ -41,13 +41,18 @@ public class Casovac {
         this.cislo3 = new CisloCasovaca(this.pozX + 40, this.pozY);
         this.cislo4 = new CisloCasovaca(this.pozX + 58, this.pozY);
     }
-    
+        
     public boolean getIde() {
         return this.ide;
     }
     
     public void setIde(boolean ide) {
         this.ide = ide;
+    
+    }
+    
+    public void resetujCas() {
+        this.cas = 0;
     }
     
     public void tik() {

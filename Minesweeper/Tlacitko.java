@@ -32,7 +32,7 @@ public class Tlacitko {
     
     public void stlac() {        
         this.jeStlacene = true;
-        this.cas = 0;
+        this.cas = 0;       
     }
     
     public int getX() {

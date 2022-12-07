@@ -41,9 +41,16 @@ public class Lista {
         this.casovac.setIde(ide);
     }
     
-    public void stlacTlacitko(int x, int y) {        
+    public boolean stlacTlacitko(int x, int y) {        
         if (x >= this.tlacitko.getX() - 16 && x <= this.tlacitko.getX() + 16 && y >= this.tlacitko.getY() - 16 && y <= this.tlacitko.getY() + 16) {
             this.tlacitko.stlac();
+            return true;
         }
+        return false;
+    }
+    
+    public void resetujCasovac() {
+        this.casovac.resetujCas();
+        this.casovac.setIde(true);
     }
 }

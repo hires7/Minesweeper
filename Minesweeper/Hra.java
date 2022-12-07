@@ -42,15 +42,29 @@ public class Hra {
     }
     
     public void vyberSuradnice(int x, int y) {
+        
+        if (this.lista.stlacTlacitko(x, y)) {
+            this.ide = true;
+            this.siet.resetujSiet();
+            this.lista.resetujCasovac();
+            this.siet.setnajdenaMina(false);
+        }
+        
         if (!ide) {
             return;
         }
-        this.lista.stlacTlacitko(x, y);
+        
         if (y > 45) {
             x /= 32;
             y = (y - 55) / 32;
             //System.out.println(x + "  " + y);
             this.siet.vyberStvorec(y, x);
+        }
+        
+        if (this.siet.getnajdenaMina()) {
+            this.lista.setCasovacIde(false);
+            this.siet.zobrazVsetkyMiny();
+            this.ide = false;
         }
     }
     
