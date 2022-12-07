@@ -47,9 +47,10 @@ public class Tlacitko {
         if (!jeStlacene){
             return;
         }
-        if (this.cas < 10) {
+        if (this.cas < 8) {
             this.cas++;
             this.pozadie.zmenObrazok("pics\\StvorecTmavy1.png");
+            this.tlacitko.zobraz();
         } else {
             this.pozadie.zmenObrazok("pics\\Stvorec1.png"); 
             this.tlacitko.zobraz();

@@ -1,12 +1,10 @@
 #BlueJ class context
 comment0.target=Casovac
 comment0.text=\r\n\ Trieda\ Casovac\ vytvori\ casovac\ v\ lavom\ hornom\ rohu\ obrazovky\r\n\ \r\n\ \!\!\!Potrebuje\ manazera\!\!\!\r\n\ \r\n\ @author\ Jakub\ Danco\r\n\ @version\ 1.0\r\n
-comment1.params=
-comment1.target=Casovac()
+comment1.params=x\ y
+comment1.target=Casovac(int,\ int)
 comment2.params=
 comment2.target=void\ tik()
-comment3.params=
-comment3.target=void\ vytvorDvojBodku()
-comment4.params=x\ y
-comment4.target=void\ zmenPoziciu(int,\ int)
-numComments=5
+comment3.params=x\ y
+comment3.target=void\ zmenPoziciu(int,\ int)
+numComments=4
