@@ -9,6 +9,7 @@
 public class Casovac {
     
     private Manazer manazer;
+    private boolean ide;
     
     private int pozX;
     private int pozY;
@@ -25,6 +26,8 @@ public class Casovac {
         this.manazer = new Manazer();
         this.manazer.spravujObjekt(this);
         
+        this.ide = false;
+        
         this.pozX = x;
         this.pozY = y;
         
@@ -39,7 +42,18 @@ public class Casovac {
         this.cislo4 = new CisloCasovaca(this.pozX + 58, this.pozY);
     }
     
+    public boolean getIde() {
+        return this.ide;
+    }
+    
+    public void setIde(boolean ide) {
+        this.ide = ide;
+    }
+    
     public void tik() {
+        if (!ide) {
+            return;
+        }
         cas++;
         
         //Tik sa spusti 4 krat za sekundu, this.cas % 4 pripocita cislo len kazdu sekundu

@@ -65,6 +65,7 @@ public class Stvorec {
                     break;
                 case 9:
                     this.obrazok.zmenObrazok("pics\\mine.png");
+                    
                     break;
             }
             this.jeZobrazene = true;

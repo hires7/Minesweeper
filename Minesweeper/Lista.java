@@ -33,6 +33,14 @@ public class Lista {
         this.manazer.spravujObjekt(this.tlacitko);
     }
     
+    public boolean getCasovacIde() {
+        return this.casovac.getIde();
+    }
+    
+    public void setCasovacIde(boolean ide) {
+        this.casovac.setIde(ide);
+    }
+    
     public void stlacTlacitko(int x, int y) {        
         if (x >= this.tlacitko.getX() - 16 && x <= this.tlacitko.getX() + 16 && y >= this.tlacitko.getY() - 16 && y <= this.tlacitko.getY() + 16) {
             this.tlacitko.stlac();

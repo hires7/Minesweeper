@@ -16,9 +16,11 @@ public class Hra {
     private Lista lista;
     private Siet siet;
     private Manazer manazer;
+    private boolean ide;
 
     public Hra(int pocetRiadkov, int pocetStlpcov, int pocetMin/*, int pozX, int PozY*/) {
-       /*this.pocetRiadkov = pocetRiadkov;
+       this.ide = false;
+        /*this.pocetRiadkov = pocetRiadkov;
        this.pocetStlpcov = pocetStlpcov;
        this.pocetMin = pocetMin;
        this.pozX = pozX + 16;
@@ -30,6 +32,9 @@ public class Hra {
            this.lista = new Lista(this.manazer, pocetStlpcov);
            
            this.siet = new Siet(pocetRiadkov, pocetStlpcov, pocetMin, 0+16, 0+56);
+           
+           this.lista.setCasovacIde(true);
+           this.ide = true;
            //this.siet.zobrazVsetko();
         } else {
             System.out.println("Pri tvorbe hre doslo k chybe:\npocet min bol nastaveny na prilis vysoku hodnotu");
@@ -37,6 +42,9 @@ public class Hra {
     }
     
     public void vyberSuradnice(int x, int y) {
+        if (!ide) {
+            return;
+        }
         this.lista.stlacTlacitko(x, y);
         if (y > 45) {
             x /= 32;
