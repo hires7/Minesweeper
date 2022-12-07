@@ -59,7 +59,7 @@ public class Casovac {
         if (!ide) {
             return;
         }
-        cas++;
+        this.cas++;
         
         //Tik sa spusti 4 krat za sekundu, this.cas % 4 pripocita cislo len kazdu sekundu
         if (this.cas % 4 == 0) {

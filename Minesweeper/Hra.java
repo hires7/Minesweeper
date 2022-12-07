@@ -46,7 +46,9 @@ public class Hra {
         if (this.lista.stlacTlacitko(x, y)) {
             this.ide = true;
             this.siet.resetujSiet();
+            this.lista.setCasovacIde(false);
             this.lista.resetujCasovac();
+            this.lista.setCasovacIde(true);
             this.siet.setnajdenaMina(false);
         }
         

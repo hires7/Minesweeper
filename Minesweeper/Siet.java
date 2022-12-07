@@ -181,6 +181,12 @@ public class Siet {
     }
     
     public void resetujSiet() {
+        for (int riadok = 0; riadok < this.siet.length; riadok++) {
+            for (int stlpec = 0; stlpec < this.siet[0].length; stlpec++) {
+                this.siet[riadok][stlpec].zmenObsah(0);
+            }
+        }
+        
         Random rand = new Random();
         
         int pocMinNaRiad = pocetMin / this.pocetRiadkov;
@@ -212,6 +218,6 @@ public class Siet {
             }
         }
         
-        this.ocisluj();
+        
     }
 }

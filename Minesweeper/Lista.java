@@ -51,6 +51,5 @@ public class Lista {
     
     public void resetujCasovac() {
         this.casovac.resetujCas();
-        this.casovac.setIde(true);
     }
 }
