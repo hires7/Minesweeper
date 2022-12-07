@@ -16,13 +16,13 @@ public class Stvorec {
     private boolean jeZobrazene;
     
     public Stvorec(int poziciaX, int poziciaY, int stranaA, int obsah) {
-        this.obrazok = new Obrazok("pics//Stvorec.png");
-        this.obrazok.zmenPolohu(poziciaX, poziciaY);
-        this.obrazok.zobraz();
-        
         this.pozadie = new Obrazok("pics//StvorecTmavy.png");
         this.pozadie.zmenPolohu(poziciaX, poziciaY);
         this.pozadie.zobraz();
+        
+        this.obrazok = new Obrazok("pics//Stvorec.png");
+        this.obrazok.zmenPolohu(poziciaX, poziciaY);
+        this.obrazok.zobraz();
         
         this.poziciaX = poziciaX;
         this.poziciaY = poziciaY;
@@ -38,6 +38,7 @@ public class Stvorec {
             switch (this.obsah) {
                 case 0:
                     this.obrazok.zmenObrazok("pics\\StvorecTmavy.png"); //blank
+                    break;
                 case 1:
                     this.obrazok.zmenObrazok("pics\\1.png");
                     break;
@@ -68,7 +69,6 @@ public class Stvorec {
             }
             this.jeZobrazene = true;
         }
-        
     }
     
     public void zmenObsah(int novyObsah) {

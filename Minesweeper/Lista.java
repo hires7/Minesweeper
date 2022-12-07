@@ -13,6 +13,8 @@ public class Lista {
     private Manazer manazer;
     private Obdlznik pozadie;
     
+    private Casovac casovac;
+    
     public Lista(Manazer manazer, int pocetStlpcov) {
         this.pocetStlpcov = pocetStlpcov;
         
@@ -22,6 +24,7 @@ public class Lista {
         this.pozadie.zmenStrany(this.pocetStlpcov * 32, 45);
         this.pozadie.zmenFarbu("gray");
         this.pozadie.zobraz();
+        this.casovac = new Casovac();
         
         this.tlacitko = new Tlacitko(this.pocetStlpcov * 32 / 2, 20);
         this.manazer.spravujObjekt(this.tlacitko);

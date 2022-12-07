@@ -16,21 +16,24 @@ public class Hra {
     private Lista lista;
     private Siet siet;
     private Manazer manazer;
-    
-    public Hra(/*int pocetRiadkov, int pocetStlpcov, int pocetMin, int pozX, int PozY*/) {
+
+    public Hra(int pocetRiadkov, int pocetStlpcov, int pocetMin/*, int pozX, int PozY*/) {
        /*this.pocetRiadkov = pocetRiadkov;
        this.pocetStlpcov = pocetStlpcov;
        this.pocetMin = pocetMin;
        this.pozX = pozX + 16;
        this.pozY = pozY + 56;*/
-       
-       this.manazer = new Manazer();
-       this.manazer.spravujObjekt(this);
-       
-       this.lista = new Lista(this.manazer, 10);
-       
-       this.siet = new Siet(10, 10, 10, 0+16, 0+56);
-       this.siet.zobrazVsetko();
+       if((pocetRiadkov * pocetStlpcov - pocetMin) > 0) {
+           this.manazer = new Manazer();
+           this.manazer.spravujObjekt(this);
+           
+           this.lista = new Lista(this.manazer, pocetStlpcov);
+           
+           this.siet = new Siet(pocetRiadkov, pocetStlpcov, pocetMin, 0+16, 0+56);
+           //this.siet.zobrazVsetko();
+        } else {
+            System.out.println("Pri tvorbe hre doslo k chybe:\npocet min bol nastaveny na prilis vysoku hodnotu");
+        }
     }
     
     public void vyberSuradnice(int x, int y) {
@@ -38,7 +41,7 @@ public class Hra {
         if (y > 45) {
             x /= 32;
             y = (y - 55) / 32;
-            System.out.println(x + "  " + y);
+            //System.out.println(x + "  " + y);
             this.siet.vyberStvorec(y, x);
         }
     }

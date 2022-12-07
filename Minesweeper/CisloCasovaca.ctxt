@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=CisloCasovaca
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Cislo\ here.\r\n\ \r\n\ @author\ Jakub\ Danco\r\n\ @version\ 1.0\r\n
+comment1.params=x\ y
+comment1.target=CisloCasovaca(int,\ int)
+comment2.params=
+comment2.target=void\ pridajCislo()
+comment2.text=\r\n\ Zvysi\ cislo\ o\ 1\r\n
+comment3.params=
+comment3.target=void\ skry()
+comment4.params=
+comment4.target=void\ vynuluj()
+comment5.params=
+comment5.target=int\ getCislo()
+numComments=6
